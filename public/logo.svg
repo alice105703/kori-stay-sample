@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <!-- Warm Sun -->
+  <circle cx="418" cy="74" r="24" fill="#DFB882" />
+
+  <!-- Mountain Outlines -->
+  <path d="M 210 128 Q 255 76 276 74 Q 302 78 322 120" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M 284 82 Q 320 86 338 102 Q 380 78 434 128" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Deciduous Tree (Left) -->
+  <!-- Trunk & Branches -->
+  <path d="M 172 188 L 172 165 M 172 165 L 158 145 M 172 160 L 186 142 M 172 152 L 166 135" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Foliage Clusters -->
+  <path d="M 170 128 C 158 116 138 124 136 140 C 122 144 122 166 138 172 C 146 178 162 178 170 172 C 178 180 200 176 204 162 C 212 148 198 134 184 132 C 182 122 174 120 170 128 Z" fill="#587E50" />
+  <path d="M 175 142 C 188 132 208 142 204 160 C 196 168 180 170 172 165 Z" fill="#46693F" opacity="0.9" />
+
+  <!-- Ground Shrub Left of House -->
+  <path d="M 180 196 C 180 174 210 168 226 182 C 236 172 260 176 264 196 Z" fill="#46693F" />
+  <path d="M 224 196 C 228 185 244 182 254 196 Z" fill="#2E4D34" />
+
+  <!-- Cabin House (Center) -->
+  <!-- Chimney -->
+  <rect x="328" y="124" width="10" height="24" fill="#C39C74" stroke="#23422C" stroke-width="2" />
+  <!-- House Walls -->
+  <polygon points="238,198 238,166 288,128 338,166 338,198" fill="#F8F3EA" stroke="#23422C" stroke-width="3" />
+  <!-- Roof Overhang -->
+  <polygon points="288,126 230,170 240,175 288,136 336,175 346,170" fill="#23422C" />
+  <!-- Window (4 Panes with warm wood finish) -->
+  <rect x="266" y="162" width="10" height="10" rx="1" fill="#C39C74" />
+  <rect x="280" y="162" width="10" height="10" rx="1" fill="#C39C74" />
+  <rect x="266" y="176" width="10" height="10" rx="1" fill="#C39C74" />
+  <rect x="280" y="176" width="10" height="10" rx="1" fill="#C39C74" />
+
+  <!-- Evergreen Pine Trees (Right) -->
+  <!-- Small Pine (Front-Left) -->
+  <path d="M 390 134 L 382 148 L 387 148 L 378 165 L 385 165 L 372 186 L 408 186 L 395 165 L 402 165 L 393 148 L 398 148 Z" fill="#294B33" />
+  <!-- Medium Pine (Center) -->
+  <path d="M 420 142 L 413 154 L 417 154 L 408 170 L 415 170 L 404 188 L 436 188 L 425 170 L 432 170 L 423 154 L 427 154 Z" fill="#22422B" />
+  <!-- Large Pine (Back-Right) -->
+  <path d="M 452 112 L 441 134 L 448 134 L 435 156 L 444 156 L 428 186 L 476 186 L 460 156 L 469 156 L 456 134 L 463 134 Z" fill="#1C3823" />
+  <!-- Shrub below Pines -->
+  <path d="M 400 196 C 404 180 430 178 440 196 Z" fill="#46693F" />
+  <path d="M 436 196 C 440 186 460 184 468 196 Z" fill="#2E4D34" />
+
+  <!-- Ground Curves (Left & Right) -->
+  <path d="M 112 210 Q 150 185 240 188 Q 280 190 290 196" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" fill="none" />
+  <path d="M 285 196 Q 340 186 420 186 Q 470 186 490 206" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+  <!-- Flowing River / Waterway (Center) -->
+  <path d="M 176 218 C 240 216 280 200 340 202 C 410 204 460 214 492 216" stroke="#4C787C" stroke-width="6.5" stroke-linecap="round" fill="none" />
+  <path d="M 230 228 C 280 226 310 215 350 217 C 400 219 440 226 470 227" stroke="#4C787C" stroke-width="4.5" stroke-linecap="round" fill="none" />
+  <path d="M 270 236 C 300 236 330 227 360 228" stroke="#4C787C" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+  <!-- Riverbed Rocks on Right -->
+  <path d="M 370 230 C 370 218 395 218 402 230 Z" fill="#23422C" />
+  <path d="M 405 230 C 405 220 428 220 436 230 Z" fill="#23422C" />
+
+  <!-- TYPOGRAPHY -->
+  <!-- "KORI STAY" Main Title -->
+  <text x="300" y="306" text-anchor="middle" font-family="'Times New Roman', 'Baskerville', 'Playfair Display', serif" font-size="52" font-weight="700" letter-spacing="9" fill="#22422C">
+    KORI STAY
+  </text>
+
+  <!-- Horizontal divider lines & "P E N S I O N" -->
+  <line x1="106" y1="334" x2="216" y2="334" stroke="#9E7649" stroke-width="2.5" stroke-linecap="round" />
+  <text x="300" y="340" text-anchor="middle" font-family="'Times New Roman', 'Baskerville', serif" font-size="20" font-weight="600" letter-spacing="12" fill="#8C6339">
+    PENSION
+  </text>
+  <line x1="384" y1="334" x2="494" y2="334" stroke="#9E7649" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- "A SPECIAL STAY IN NATURE" Subtitle -->
+  <text x="300" y="372" text-anchor="middle" font-family="'Times New Roman', 'Pretendard', sans-serif" font-size="14.5" font-weight="500" letter-spacing="7" fill="#22422C">
+    A SPECIAL STAY IN NATURE
+  </text>
+</svg>

@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>코리스테이 - 감성 우드톤 힐링 펜션</title>
+
+  <!-- Google Fonts: Noto Serif KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#F8F6F0',
+              card: '#FDFBF7',
+              wood: '#9C6644',
+              woodDark: '#7A5A40',
+              brown: '#2C221A',
+              border: '#E7DDD0',
+              sand: '#E5D7C5',
+              darkBg: '#1E1712',
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif KR"', 'serif'],
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* =========================================================
+       아임웹(Imweb) 글로벌 CSS 충돌 방지 및 반응형 레이아웃 보장
+       ========================================================= */
+    #kori-wrapper {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif !important;
+      background-color: #F8F6F0 !important;
+      color: #2C221A !important;
+      line-height: 1.6;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    #kori-wrapper * {
+      box-sizing: border-box;
+    }
+    #kori-wrapper .font-serif-kr {
+      font-family: 'Noto Serif KR', serif !important;
+    }
+
+    /* 히어로 배경 슬라이드 애니메이션 */
+    .hero-slide {
+      transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), transform 6s ease-out;
+    }
+
+    /* 아임웹 헤더 충돌 방지: 데스크톱 메뉴 강제 노출 보장 */
+    @media (min-width: 900px) {
+      .kori-nav-desktop {
+        display: flex !important;
+        align-items: center !important;
+        gap: 2.25rem !important;
+      }
+      .kori-mobile-menu-btn {
+        display: none !important;
+      }
+    }
+    @media (max-width: 899px) {
+      .kori-nav-desktop {
+        display: none !important;
+      }
+      .kori-mobile-menu-btn {
+        display: flex !important;
+      }
+    }
+
+    /* 링크 텍스트 밑줄 제거 및 색상 강제 */
+    #kori-wrapper a {
+      text-decoration: none !important;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F6F0] text-[#2C221A] antialiased m-0 p-0">
+
+<div id="kori-wrapper" class="pb-16 md:pb-0">
+
+  <!-- ==================== 1. 상단 네비게이션 헤더 ==================== -->
+  <div class="kori-header sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8DFC8] shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 sm:h-24">
+        
+        <!-- 브랜드 로고 (코리스테이 공식 숲속 별장 일러스트 엠블럼 + 프리미엄 타이포) -->
+        <a href="#hero" class="flex items-center gap-3.5 group text-left">
+          <!-- 감성 펜션 공식 일러스트 엠블럼 (원목 테두리 & 산, 별장, 소나무, 시냇물) -->
+          <div class="w-13 h-13 sm:w-16 sm:h-16 rounded-2xl bg-[#FAF6EE] border-2 border-[#D5C6B5] shadow-md flex items-center justify-center p-1 group-hover:scale-105 transition-transform shrink-0 overflow-hidden">
+            <svg viewBox="0 0 400 240" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- 따스한 햇살 -->
+              <circle cx="280" cy="50" r="22" fill="#DFB882" />
+              <!-- 능선 산자락 -->
+              <path d="M 120 100 Q 165 52 186 50 Q 212 54 232 94" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M 194 58 Q 230 62 248 78 Q 290 54 344 104" stroke="#23422C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- 활엽수 -->
+              <path d="M 82 158 L 82 135 M 82 135 L 68 115 M 82 130 L 96 112 M 82 122 L 76 105" stroke="#23422C" stroke-width="4" stroke-linecap="round" />
+              <path d="M 80 98 C 68 86 48 94 46 110 C 32 114 32 136 48 142 C 56 148 72 148 80 142 C 88 150 110 146 114 132 C 122 118 108 104 94 102 C 92 92 84 90 80 98 Z" fill="#587E50" />
+              <!-- 통나무 별장 오두막 -->
+              <rect x="238" y="94" width="10" height="24" fill="#C39C74" stroke="#23422C" stroke-width="1.5" />
+              <polygon points="148,168 148,136 198,98 248,136 248,168" fill="#F8F3EA" stroke="#23422C" stroke-width="2.5" />
+              <polygon points="198,96 140,140 150,145 198,106 246,145 256,140" fill="#23422C" />
+              <rect x="176" y="132" width="9" height="9" rx="1" fill="#C39C74" />
+              <rect x="190" y="132" width="9" height="9" rx="1" fill="#C39C74" />
+              <rect x="176" y="146" width="9" height="9" rx="1" fill="#C39C74" />
+              <rect x="190" y="146" width="9" height="9" rx="1" fill="#C39C74" />
+              <!-- 소나무 숲 -->
+              <path d="M 300 104 L 292 118 L 297 118 L 288 135 L 295 135 L 282 156 L 318 156 L 305 135 L 312 135 L 303 118 L 308 118 Z" fill="#294B33" />
+              <path d="M 330 112 L 323 124 L 327 124 L 318 140 L 325 140 L 314 158 L 346 158 L 335 140 L 342 140 L 333 124 L 337 124 Z" fill="#22422B" />
+              <path d="M 362 82 L 351 104 L 358 104 L 345 126 L 354 126 L 338 156 L 386 156 L 370 126 L 379 126 L 366 104 L 373 104 Z" fill="#1C3823" />
+              <!-- 맑은 시냇물 곡선 -->
+              <path d="M 86 188 C 150 186 190 170 250 172 C 320 174 370 184 402 186" stroke="#4C787C" stroke-width="5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-serif-kr text-2xl sm:text-3xl font-bold tracking-tight text-[#2B2119] block leading-none">
+                코리스테이
+              </span>
+              <span class="font-serif-kr text-base sm:text-lg font-semibold tracking-wider text-[#9C6644] hidden sm:inline">
+                KORI STAY
+              </span>
+            </div>
+            <span class="text-xs sm:text-[13px] tracking-widest text-[#8C6D52] font-semibold uppercase mt-1 block">
+              PRIVATE FOREST RETREAT
+            </span>
+          </div>
+        </a>
+
+        <!-- 데스크톱 메뉴 (아임웹 nav 숨김 태그 방지를 위해 div.kori-nav-desktop 사용) -->
+        <div class="kori-nav-desktop text-base sm:text-[17px] font-semibold text-[#4A3B32]">
+          <a href="#rooms" class="hover:text-[#9C6644] transition-colors py-2">객실 안내</a>
+          <a href="#facilities" class="hover:text-[#9C6644] transition-colors py-2">부대시설</a>
+          <a href="#location" class="hover:text-[#9C6644] transition-colors py-2">오시는 길</a>
+          <a href="#guide" class="hover:text-[#9C6644] transition-colors py-2">이용 안내 & FAQ</a>
+        </div>
+
+        <!-- 우측 네이버 예약 버튼 및 모바일 햄버거 버튼 -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <a
+            href="https://booking.naver.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-3.5 py-2 sm:px-6 sm:py-3.5 rounded-full bg-[#03C75A] hover:bg-[#02B350] text-white text-xs sm:text-base font-bold shadow-lg shadow-[#03C75A]/25 transition-all transform hover:-translate-y-0.5"
+          >
+            <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white text-[#03C75A] flex items-center justify-center text-[10px] sm:text-xs font-black">N</span>
+            <span class="hidden xs:inline">네이버 실시간 예약</span>
+            <span class="xs:hidden">예약하기</span>
+          </a>
+
+          <!-- 모바일 전용 햄버거 버튼 -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="kori-mobile-menu-btn p-2.5 rounded-xl border border-[#D5C6B5] bg-[#FAF6EE] text-[#4A3B32] hover:bg-[#EFE8DC] transition-colors cursor-pointer"
+            aria-label="메뉴 열기"
+          >
+            <i data-lucide="menu" id="mobile-menu-icon" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div id="mobile-dropdown" class="hidden border-t border-[#E8DFC8] bg-[#FAF7F2] px-6 py-4 space-y-3 font-semibold text-[#4A3B32] shadow-lg">
+      <a href="#rooms" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#9C6644] border-b border-[#EFE8DC]">객실 안내 (5 Rooms)</a>
+      <a href="#facilities" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#9C6644] border-b border-[#EFE8DC]">부대시설 (바비큐·불멍·스파·숲길)</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#9C6644] border-b border-[#EFE8DC]">오시는 길 (서백길 125-9)</a>
+      <a href="#guide" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#9C6644]">이용 안내 & 자주 묻는 질문</a>
+    </div>
+  </div>
+
+
+  <!-- ==================== 2. 메인 히어로 섹션 (가독성 & 타이포그래피 대폭 확대) ==================== -->
+  <section id="hero" class="relative min-h-[70vh] sm:min-h-[82vh] flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#16110D]">
+    <!-- 배경 슬라이드쇼 이미지 -->
+    <div id="hero-carousel" class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <img
+        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+        alt="코리스테이 숲속 전경"
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center opacity-100 scale-100"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+        alt="자연 채광 테라스"
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center opacity-0 scale-105"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=2070&auto=format&fit=crop"
+        alt="고요한 별장 전경"
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center opacity-0 scale-105"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop"
+        alt="초록빛 정원 힐링 스테이"
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center opacity-0 scale-105"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2070&auto=format&fit=crop"
+        alt="원목 실내 공간"
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center opacity-0 scale-105"
+      />
+    </div>
+
+    <!-- 어두운 비네팅 & 감성 그라데이션 오버레이 (글씨 대비 극대화) -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1A130E] via-[#241B15]/75 to-[#16110D]/80 pointer-events-none z-[1]"></div>
+    <div class="absolute inset-0 bg-[#2C1D13]/30 mix-blend-multiply pointer-events-none z-[1]"></div>
+
+    <!-- 히어로 컨텐츠 (더 크고 읽기 편한 글씨) -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white mt-2">
+      <!-- 뱃지 -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-[#E7C69F] text-xs sm:text-sm font-semibold mb-6">
+        <i data-lucide="sparkles" class="w-4 h-4 text-[#E7C69F]"></i>
+        <span>PRIVATE FOREST RETREAT IN CHUNCHEON</span>
+      </div>
+
+      <!-- 메인 카피 (대형 타이틀) -->
+      <h1 class="font-serif-kr text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight sm:leading-[1.2] mb-6 text-[#FDFBF7] drop-shadow-md">
+        나무의 결, 숲의 소리<br />
+        <span class="text-[#E7C69F] font-normal italic">코리스테이</span>에서의 온전한 쉼
+      </h1>
+
+      <!-- 서브 카피 (글씨 크기 및 행간 확대) -->
+      <p class="max-w-3xl mx-auto text-base sm:text-xl lg:text-2xl text-[#E5D7C5] font-light leading-relaxed mb-10 drop-shadow">
+        솔바람, 물소리, 달마루, 숲마당, 별하늘. 다섯 가지 자연을 품은 독채에서<br class="hidden sm:inline" />
+        일상의 소음을 잊고 온전히 나에게 집중하는 따스한 힐링을 선물합니다.
+      </p>
+
+      <!-- 액션 버튼들 (크기 44px 이상, 명확한 클릭 영역) -->
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+        <a
+          href="https://booking.naver.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-8 py-4 sm:px-10 sm:py-4.5 rounded-full bg-[#9C6644] hover:bg-[#835234] text-white font-bold text-base sm:text-lg shadow-2xl shadow-black/40 transition-all hover:scale-105 inline-flex items-center gap-3 border border-[#B8805A]"
+        >
+          <span>실시간 예약하기</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a
+          href="#rooms"
+          class="px-8 py-4 sm:px-10 sm:py-4.5 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 font-semibold text-base sm:text-lg transition-all hover:scale-105"
+        >
+          객실 둘러보기
+        </a>
+      </div>
+    </div>
+
+    <!-- 하단 캐러셀 인디케이터 점 -->
+    <div id="hero-indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 pointer-events-auto">
+      <button onclick="setHeroSlide(0)" class="h-2 rounded-full w-8 bg-[#E7C69F] transition-all duration-500 cursor-pointer" aria-label="1번 사진"></button>
+      <button onclick="setHeroSlide(1)" class="h-2 rounded-full w-2 bg-white/40 transition-all duration-500 cursor-pointer" aria-label="2번 사진"></button>
+      <button onclick="setHeroSlide(2)" class="h-2 rounded-full w-2 bg-white/40 transition-all duration-500 cursor-pointer" aria-label="3번 사진"></button>
+      <button onclick="setHeroSlide(3)" class="h-2 rounded-full w-2 bg-white/40 transition-all duration-500 cursor-pointer" aria-label="4번 사진"></button>
+      <button onclick="setHeroSlide(4)" class="h-2 rounded-full w-2 bg-white/40 transition-all duration-500 cursor-pointer" aria-label="5번 사진"></button>
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. 5대 시그니처 객실 쇼케이스 ==================== -->
+  <section id="rooms" class="py-24 bg-[#F4EFE6] border-t border-[#E7DDD0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 섹션 헤더 -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5D7C5] text-[#7A5A40] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3.5">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>5 PRIVATE ROOMS</span>
+        </div>
+        <h2 class="font-serif-kr text-3xl sm:text-5xl text-[#2B221A] font-bold mb-5 tracking-tight">
+          코리스테이 객실 안내
+        </h2>
+        <p class="text-[#635142] text-base sm:text-lg font-light leading-relaxed">
+          자연의 이름을 품은 5개의 독립된 공간. 전 객실 개별 테라스와 프라이빗 힐링 옵션이 준비되어 있습니다.
+        </p>
+      </div>
+
+      <!-- 객실 리스트 (가독성 높은 폰트와 큼직한 이미지 레이아웃) -->
+      <div class="space-y-16">
+
+        <!-- ROOM 1: 솔바람 -->
+        <article class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-6 relative bg-[#1E1712] aspect-[4/3] lg:aspect-auto overflow-hidden">
+            <div id="slider-solbaram" class="relative w-full h-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80" alt="솔바람 객실 1" class="w-full h-full object-cover object-center active" />
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="솔바람 객실 2" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="솔바람 객실 3" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1000&q=80" alt="솔바람 객실 4" class="w-full h-full object-cover object-center hidden" />
+            </div>
+            <div class="absolute top-5 left-5 flex gap-2 z-10">
+              <span class="px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white font-serif-kr text-sm font-bold">솔바람</span>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2B2119] text-sm font-semibold">독채 16평</span>
+            </div>
+            <button onclick="changeRoomSlide('solbaram', -1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="이전 사진">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button onclick="changeRoomSlide('solbaram', 1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="다음 사진">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+            <div class="absolute bottom-4 right-5 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-xs font-mono">
+              <span id="counter-solbaram">1 / 4</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 gap-2">
+                <div>
+                  <h3 class="font-serif-kr text-3xl font-bold text-[#2B2119]">솔바람</h3>
+                  <span class="text-sm text-[#8C6D52] font-medium tracking-wide">Solbaram Room · 기준 2인 / 최대 2인</span>
+                </div>
+                <div class="sm:text-right">
+                  <span class="text-xs text-[#8C6D52] block font-medium">1박 기준</span>
+                  <span class="text-2xl sm:text-3xl font-bold text-[#9C6644]">120,000원~</span>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                솔잎 사이로 불어오는 청량한 바람과 잣나무 숲을 품은 미니멀 우드 독채. 둘만의 아늑하고 고요한 쉼에 가장 최적화된 공간입니다.
+              </p>
+              <div class="space-y-2.5 mb-8 text-sm text-[#4E3E32]">
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span class="font-medium">프라이빗 포레스트 숲 조망 전용 테라스 데크</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>제네바(Geneva) 클래식 오디오 & 스페셜티 핸드드립 도구 세트</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>시몬스 퀸 베드 · 록시땅(L'Occitane) 프리미엄 어메니티</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-[#EFE8DC] flex items-center justify-between gap-4">
+              <button onclick="openRoomModal('solbaram')" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-bold text-[#4E3E32] hover:bg-[#FAF6EF] transition-colors cursor-pointer">
+                상세보기 & 객실 안내
+              </button>
+              <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2">
+                <span>네이버 예약</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROOM 2: 물소리 -->
+        <article class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-6 relative bg-[#1E1712] aspect-[4/3] lg:aspect-auto overflow-hidden">
+            <div id="slider-mulsori" class="relative w-full h-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80" alt="물소리 객실 1" class="w-full h-full object-cover object-center active" />
+              <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=80" alt="물소리 객실 2" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1000&q=80" alt="물소리 객실 3" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80" alt="물소리 객실 4" class="w-full h-full object-cover object-center hidden" />
+            </div>
+            <div class="absolute top-5 left-5 flex gap-2 z-10">
+              <span class="px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white font-serif-kr text-sm font-bold">물소리</span>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2B2119] text-sm font-semibold">독채 22평</span>
+            </div>
+            <button onclick="changeRoomSlide('mulsori', -1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="이전 사진">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button onclick="changeRoomSlide('mulsori', 1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="다음 사진">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+            <div class="absolute bottom-4 right-5 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-xs font-mono">
+              <span id="counter-mulsori">1 / 4</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 gap-2">
+                <div>
+                  <h3 class="font-serif-kr text-3xl font-bold text-[#2B2119]">물소리</h3>
+                  <span class="text-sm text-[#8C6D52] font-medium tracking-wide">Mulsori Room · 기준 2인 / 최대 3인</span>
+                </div>
+                <div class="sm:text-right">
+                  <span class="text-xs text-[#8C6D52] block font-medium">1박 기준</span>
+                  <span class="text-2xl sm:text-3xl font-bold text-[#9C6644]">180,000원~</span>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                맑은 청정 계곡의 잔잔한 물소리와 함께 즐기는 대형 실내 릴렉스 자쿠지와 따뜻한 원목 반신욕 힐링.
+              </p>
+              <div class="space-y-2.5 mb-8 text-sm text-[#4E3E32]">
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span class="font-medium">계곡 조망 대형 프라이빗 실내 자쿠지 & 천연 솔트 어메니티</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>전통 도자기 다도 세트 & 유기농 꽃차 티 컬렉션</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>킹 사이즈 천연 라텍스 베드 · 다이슨 슈퍼소닉 헤어드라이어</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-[#EFE8DC] flex items-center justify-between gap-4">
+              <button onclick="openRoomModal('mulsori')" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-bold text-[#4E3E32] hover:bg-[#FAF6EF] transition-colors cursor-pointer">
+                상세보기 & 객실 안내
+              </button>
+              <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2">
+                <span>네이버 예약</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROOM 3: 달마루 -->
+        <article class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-6 relative bg-[#1E1712] aspect-[4/3] lg:aspect-auto overflow-hidden">
+            <div id="slider-dalmaru" class="relative w-full h-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="달마루 객실 1" class="w-full h-full object-cover object-center active" />
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="달마루 객실 2" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80" alt="달마루 객실 3" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" alt="달마루 객실 4" class="w-full h-full object-cover object-center hidden" />
+            </div>
+            <div class="absolute top-5 left-5 flex gap-2 z-10">
+              <span class="px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white font-serif-kr text-sm font-bold">달마루</span>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2B2119] text-sm font-semibold">독채 28평</span>
+            </div>
+            <button onclick="changeRoomSlide('dalmaru', -1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="이전 사진">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button onclick="changeRoomSlide('dalmaru', 1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="다음 사진">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+            <div class="absolute bottom-4 right-5 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-xs font-mono">
+              <span id="counter-dalmaru">1 / 4</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 gap-2">
+                <div>
+                  <h3 class="font-serif-kr text-3xl font-bold text-[#2B2119]">달마루</h3>
+                  <span class="text-sm text-[#8C6D52] font-medium tracking-wide">Dalmaru Room · 기준 2인 / 최대 4인</span>
+                </div>
+                <div class="sm:text-right">
+                  <span class="text-xs text-[#8C6D52] block font-medium">1박 기준</span>
+                  <span class="text-2xl sm:text-3xl font-bold text-[#9C6644]">240,000원~</span>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                은은한 달빛이 스며드는 한옥식 대청마루와 현대적 감각이 조화로운 시그니처 룸. 영화 감상과 다도 티 라운지가 마련되어 있습니다.
+              </p>
+              <div class="space-y-2.5 mb-8 text-sm text-[#4E3E32]">
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span class="font-medium">전통 대청마루 감성 프리미엄 티 라운지 공간</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>LG 시네빔 4K 100인치 대형 스크린 & 마샬 워번 스피커</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>발뮤다 더 레인지 & 바이레도(Byredo) 럭셔리 어메니티</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-[#EFE8DC] flex items-center justify-between gap-4">
+              <button onclick="openRoomModal('dalmaru')" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-bold text-[#4E3E32] hover:bg-[#FAF6EF] transition-colors cursor-pointer">
+                상세보기 & 객실 안내
+              </button>
+              <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2">
+                <span>네이버 예약</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROOM 4: 숲마당 -->
+        <article class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-6 relative bg-[#1E1712] aspect-[4/3] lg:aspect-auto overflow-hidden">
+            <div id="slider-supmadang" class="relative w-full h-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="숲마당 객실 1" class="w-full h-full object-cover object-center active" />
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" alt="숲마당 객실 2" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" alt="숲마당 객실 3" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1000&q=80" alt="숲마당 객실 4" class="w-full h-full object-cover object-center hidden" />
+            </div>
+            <div class="absolute top-5 left-5 flex gap-2 z-10">
+              <span class="px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white font-serif-kr text-sm font-bold">숲마당</span>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2B2119] text-sm font-semibold">독채 36평</span>
+            </div>
+            <button onclick="changeRoomSlide('supmadang', -1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="이전 사진">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button onclick="changeRoomSlide('supmadang', 1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="다음 사진">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+            <div class="absolute bottom-4 right-5 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-xs font-mono">
+              <span id="counter-supmadang">1 / 4</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 gap-2">
+                <div>
+                  <h3 class="font-serif-kr text-3xl font-bold text-[#2B2119]">숲마당</h3>
+                  <span class="text-sm text-[#8C6D52] font-medium tracking-wide">Supmadang Room · 기준 4인 / 최대 5인</span>
+                </div>
+                <div class="sm:text-right">
+                  <span class="text-xs text-[#8C6D52] block font-medium">1박 기준</span>
+                  <span class="text-2xl sm:text-3xl font-bold text-[#9C6644]">310,000원~</span>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                50평 단독 잔디 마당과 피톤치드 편백나무(히노끼) 노천 스파를 갖춘 프라이빗 가든 빌라. 가족 모임에 최적입니다.
+              </p>
+              <div class="space-y-2.5 mb-8 text-sm text-[#4E3E32]">
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span class="font-medium">단독 50평 천연 잔디 마당 & 해먹 힐링 존</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>기소산 천연 편백(히노끼) 대형 노천 스파 (4인용)</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>에이스 퀸 베드 2개 · 이솝(Aesop) 4종 바디 어메니티</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-[#EFE8DC] flex items-center justify-between gap-4">
+              <button onclick="openRoomModal('supmadang')" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-bold text-[#4E3E32] hover:bg-[#FAF6EF] transition-colors cursor-pointer">
+                상세보기 & 객실 안내
+              </button>
+              <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2">
+                <span>네이버 예약</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROOM 5: 별하늘 -->
+        <article class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-6 relative bg-[#1E1712] aspect-[4/3] lg:aspect-auto overflow-hidden">
+            <div id="slider-byeolhaneul" class="relative w-full h-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80" alt="별하늘 객실 1" class="w-full h-full object-cover object-center active" />
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="별하늘 객실 2" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80" alt="별하늘 객실 3" class="w-full h-full object-cover object-center hidden" />
+              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80" alt="별하늘 객실 4" class="w-full h-full object-cover object-center hidden" />
+            </div>
+            <div class="absolute top-5 left-5 flex gap-2 z-10">
+              <span class="px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white font-serif-kr text-sm font-bold">별하늘</span>
+              <span class="px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#2B2119] text-sm font-semibold">독채 복층 42평</span>
+            </div>
+            <button onclick="changeRoomSlide('byeolhaneul', -1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="이전 사진">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button onclick="changeRoomSlide('byeolhaneul', 1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white transition-colors cursor-pointer" aria-label="다음 사진">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+            <div class="absolute bottom-4 right-5 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-xs font-mono">
+              <span id="counter-byeolhaneul">1 / 4</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 gap-2">
+                <div>
+                  <h3 class="font-serif-kr text-3xl font-bold text-[#2B2119]">별하늘</h3>
+                  <span class="text-sm text-[#8C6D52] font-medium tracking-wide">Byeolhaneul Penthouse · 기준 4인 / 최대 6인</span>
+                </div>
+                <div class="sm:text-right">
+                  <span class="text-xs text-[#8C6D52] block font-medium">1박 기준</span>
+                  <span class="text-2xl sm:text-3xl font-bold text-[#9C6644]">340,000원~</span>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                천창으로 쏟아지는 밤하늘 은하수를 감상하는 최고층 복층 펜트하우스. 루프탑 온수 스파와 글래스 돔 침실을 갖췄습니다.
+              </p>
+              <div class="space-y-2.5 mb-8 text-sm text-[#4E3E32]">
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span class="font-medium">침대 위 글래스 돔 천창 (별빛 파노라마 뷰)</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>루프탑 파노라마 인피니티 온수 노천 스파</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i>
+                  <span>템퍼 킹 베드 + 퀸 베드 · 조말론(Jo Malone) 어메니티</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-[#EFE8DC] flex items-center justify-between gap-4">
+              <button onclick="openRoomModal('byeolhaneul')" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-bold text-[#4E3E32] hover:bg-[#FAF6EF] transition-colors cursor-pointer">
+                상세보기 & 객실 안내
+              </button>
+              <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2">
+                <span>네이버 예약</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 4. 특별 부대시설 ==================== -->
+  <section id="facilities" class="py-24 bg-[#F8F6F0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5D7C5] text-[#7A5A40] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3.5">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>KORI STAY SPECIAL SPACES</span>
+        </div>
+        <h2 class="font-serif-kr text-3xl sm:text-5xl text-[#2B221A] font-bold mb-5 tracking-tight">
+          숲의 온기를 더하는 특별한 부대시설
+        </h2>
+        <p class="text-[#635142] text-base sm:text-lg font-light leading-relaxed">
+          프라이빗 바비큐부터 밤하늘 아래 타오르는 모닥불 불멍, 편백나무 향 가득한 스파까지<br class="hidden sm:inline" />
+          코리스테이가 선사하는 따뜻한 휴식의 순간들을 만나보세요.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <!-- 시설 1: 바비큐 -->
+        <div class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative aspect-video w-full overflow-hidden bg-[#2C2119]">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="개별 테라스 숯불 바비큐" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white text-xs sm:text-sm font-medium">전 객실 단독 테라스</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-kr text-2xl font-bold text-[#2B2119] mb-3">프라이빗 테라스 참숯 바비큐</h3>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                모든 객실 전용 데크에서 날씨에 구애받지 않는 프리미엄 웨버 그릴과 강원도 최고급 참숯으로 즐기는 바비큐 만찬.
+              </p>
+              <div class="space-y-2 text-sm text-[#413327]">
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>웨버 정품 대형 그릴 & 강원도 참숯 백탄 제공</span></div>
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>목장갑, 집게, 가위, 그릴 석쇠 일체 완비</span></div>
+              </div>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#EFE8DC] flex items-center justify-between text-sm text-[#7A695A]">
+              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-[#9C6644]"></i>17:00 ~ 21:00</span>
+              <span class="font-bold text-[#9C6644] font-serif-kr text-base sm:text-lg">30,000원 (2~4인 기준)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 시설 2: 불멍 -->
+        <div class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative aspect-video w-full overflow-hidden bg-[#2C2119]">
+            <img src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=1000&q=80" alt="잣나무 숲 모닥불 불멍" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white text-xs sm:text-sm font-medium">야외 정원 감성 캠프파이어</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-kr text-2xl font-bold text-[#2B2119] mb-3">잣나무 숲 모닥불 & 불멍 세트</h3>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                타닥타닥 타오르는 참나무 장작 소리와 밤하늘의 쏟아지는 별을 바라보며 마시멜로를 구워 먹는 낭만적인 시간.
+              </p>
+              <div class="space-y-2 text-sm text-[#413327]">
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>자연 건조 참나무 장작 1망(10kg) & 화로대</span></div>
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>마시멜로 꼬치 키트 & 매직 오로라 가루 증정</span></div>
+              </div>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#EFE8DC] flex items-center justify-between text-sm text-[#7A695A]">
+              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-[#9C6644]"></i>19:00 ~ 22:30</span>
+              <span class="font-bold text-[#9C6644] font-serif-kr text-base sm:text-lg">25,000원 (장작 1망 세트)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 시설 3: 스파 -->
+        <div class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative aspect-video w-full overflow-hidden bg-[#2C2119]">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" alt="편백나무 히노끼 노천 스파" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white text-xs sm:text-sm font-medium">물소리·숲마당·별하늘 구비</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-kr text-2xl font-bold text-[#2B2119] mb-3">자연 편백나무(히노끼) 노천 스파</h3>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                따뜻한 온수와 함께 퍼지는 깊고 은은한 피톤치드 편백 향기로 일상의 피로를 사르르 녹여내는 힐링 스파입니다.
+              </p>
+              <div class="space-y-2 text-sm text-[#413327]">
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>천연 기소산 원목 편백 욕조 & 천연 솔트 어메니티</span></div>
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>사계절 일정한 온수 순환 자동 시스템</span></div>
+              </div>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#EFE8DC] flex items-center justify-between text-sm text-[#7A695A]">
+              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-[#9C6644]"></i>15:00 ~ 22:00</span>
+              <span class="font-bold text-[#9C6644] font-serif-kr text-base sm:text-lg">해당 객실 무료 제공</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 시설 4: 산책로 -->
+        <div class="bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative aspect-video w-full overflow-hidden bg-[#2C2119]">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=80" alt="잣나무 숲 산책로 & 해먹 존" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white text-xs sm:text-sm font-medium">투숙객 전용 프라이빗 숲</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-kr text-2xl font-bold text-[#2B2119] mb-3">잣나무 숲 산책로 & 해먹 존</h3>
+              <p class="text-sm sm:text-base text-[#5C4A3C] font-light leading-relaxed mb-6">
+                코리스테이 뒤편으로 이어지는 300m 피톤치드 숲길. 새소리와 바람 소리를 벗 삼아 해먹에 누워 진정한 휴식을 만끽하세요.
+              </p>
+              <div class="space-y-2 text-sm text-[#413327]">
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>잣나무 숲 프라이빗 산책 데크 로드</span></div>
+                <div class="flex items-center gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#9C6644] shrink-0"></i><span>야외 해먹 및 원목 벤치 쉼터 완비</span></div>
+              </div>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#EFE8DC] flex items-center justify-between text-sm text-[#7A695A]">
+              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-[#9C6644]"></i>07:00 ~ 일몰 시</span>
+              <span class="font-bold text-[#9C6644] font-serif-kr text-base sm:text-lg">전 투숙객 무료 이용</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. 오시는 길 & 문의 ==================== -->
+  <section id="location" class="py-24 bg-[#F4EFE6] border-t border-[#E7DDD0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5D7C5] text-[#7A5A40] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3.5">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>LOCATION & ACCESS</span>
+        </div>
+        <h2 class="font-serif-kr text-3xl sm:text-5xl text-[#2B221A] font-bold mb-5 tracking-tight">
+          오시는 길 안내
+        </h2>
+        <p class="text-[#635142] text-base sm:text-lg font-light leading-relaxed">
+          서울에서 60분, 피톤치드가 가득한 잣나무 숲길에 코리스테이가 위치해 있습니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <!-- 지도 그래픽 & 주소 박스 -->
+        <div class="lg:col-span-7 bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] p-6 sm:p-8 shadow-sm space-y-6">
+          <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-[#2D382E] border border-[#D5C6B5] flex items-center justify-center text-white">
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
+              alt="위치 지도 그래픽"
+              class="w-full h-full object-cover opacity-60 filter contrast-125"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#201712]/95 via-[#2E241C]/40 to-black/30"></div>
+            <!-- 핀 -->
+            <div class="absolute flex flex-col items-center">
+              <div class="px-4 py-2 rounded-xl bg-[#9C6644] text-white text-sm font-bold shadow-2xl border border-white/30 flex items-center gap-1.5">
+                <i data-lucide="trees" class="w-4 h-4"></i>
+                <span>코리스테이 본관</span>
+              </div>
+              <div class="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-[#9C6644]"></div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-[#1C1510]/90 backdrop-blur-md p-4 rounded-xl border border-[#4F3F32] flex flex-col sm:flex-row sm:items-center justify-between text-xs sm:text-sm gap-2">
+              <span class="text-[#E7DDD0] font-medium truncate">강원도 춘천시 남산면 서백길 125-9 코리스테이</span>
+              <span class="text-[#E7C69F] font-bold shrink-0">무료 주차 10대 완비</span>
+            </div>
+          </div>
+
+          <!-- 주소 및 복사 버튼 -->
+          <div class="p-5 rounded-2xl bg-[#F4EFE6] border border-[#E7DDD0] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs text-[#8C6D52] font-bold uppercase tracking-wider block mb-1">도로명 주소</span>
+              <span class="font-serif-kr text-base sm:text-lg font-bold text-[#2B2119]">강원도 춘천시 남산면 서백길 125-9 코리스테이</span>
+            </div>
+            <button
+              id="copy-address-btn"
+              onclick="copyAddressText()"
+              class="px-4 py-2.5 rounded-xl bg-white border border-[#C5B39F] text-xs sm:text-sm font-bold text-[#524133] hover:bg-[#FAF6EF] transition-colors flex items-center gap-1.5 cursor-pointer shrink-0 shadow-sm"
+            >
+              <i data-lucide="copy" class="w-4 h-4 text-[#9C6644]"></i>
+              <span id="copy-address-label">주소 복사</span>
+            </button>
+          </div>
+
+          <!-- 네비게이션 바로가기 버튼들 -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs sm:text-sm">
+            <span class="text-[#7A695A] font-semibold mr-1">내비게이션 바로가기:</span>
+            <a
+              href="https://map.kakao.com/?q=%EA%B0%95%EC%9B%90%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%EB%82%A8%EC%82%B0%EB%A9%B4%20%EC%84%9C%EB%B0%B1%EA%B8%B8%20125-9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-lg bg-[#FEE500] text-[#191919] font-bold hover:brightness-95 transition-all inline-flex items-center gap-1"
+            >
+              <span>카카오맵</span>
+            </a>
+            <a
+              href="https://map.naver.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-lg bg-[#03C75A] text-white font-bold hover:brightness-95 transition-all inline-flex items-center gap-1"
+            >
+              <span>네이버지도</span>
+            </a>
+            <a
+              href="https://tmap.co.kr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-lg bg-[#1B64DA] text-white font-bold hover:brightness-95 transition-all inline-flex items-center gap-1"
+            >
+              <span>티맵(T-map)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 교통 안내 카드들 -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="bg-[#FDFBF7] p-7 rounded-3xl border border-[#E7DDD0] shadow-sm">
+            <div class="flex items-center gap-2.5 mb-3">
+              <i data-lucide="car" class="w-5 h-5 text-[#9C6644]"></i>
+              <h4 class="font-bold text-sm text-[#8C6D52] uppercase tracking-wider">자가용 이용 시</h4>
+            </div>
+            <p class="text-sm sm:text-base text-[#524133] leading-relaxed">
+              내비게이션에 <strong>'코리스테이'</strong> 또는 <strong>'강원도 춘천시 남산면 서백길 125-9'</strong>를 입력하세요.<br />
+              <span class="text-xs sm:text-sm text-[#7A695A] mt-1.5 block">· 서울양양고속도로 강촌IC에서 나와 차로 약 15분 소요됩니다.</span>
+            </p>
+          </div>
+
+          <div class="bg-[#FDFBF7] p-7 rounded-3xl border border-[#E7DDD0] shadow-sm">
+            <div class="flex items-center gap-2.5 mb-3">
+              <i data-lucide="train" class="w-5 h-5 text-[#9C6644]"></i>
+              <h4 class="font-bold text-sm text-[#8C6D52] uppercase tracking-wider">대중교통 & 픽업</h4>
+            </div>
+            <p class="text-sm sm:text-base text-[#524133] leading-relaxed">
+              경춘선 또는 ITX-청춘 탑승 후 <strong>강촌역</strong> 또는 <strong>백양리역</strong> 하차.<br />
+              <span class="text-xs sm:text-sm text-[#7A695A] mt-1.5 block">· 역 앞 택시 탑승 시 약 10~12분 소요 (요금 약 11,000원 선)</span>
+              <span class="text-xs sm:text-sm text-[#7A695A] mt-1 block">· 대중교통 이용 고객 대상 사전 예약 시 마트 무료 픽업 연계 가능</span>
+            </p>
+          </div>
+
+          <!-- 전화 문의 배너 -->
+          <div class="bg-[#241A13] p-6 sm:p-7 rounded-3xl text-white shadow-xl flex items-center justify-between border border-[#483728]">
+            <div>
+              <span class="text-xs text-[#C5B39F] font-semibold block mb-1">예약 및 오시는 길 유선 문의</span>
+              <span class="font-serif-kr text-xl sm:text-2xl font-bold text-[#FAF6F0]">010-8742-9981</span>
+              <span class="text-xs text-[#8C7664] block mt-0.5">운영시간: 09:00 ~ 21:00 (연중무휴)</span>
+            </div>
+            <a
+              href="tel:010-8742-9981"
+              class="px-5 py-3 rounded-2xl bg-[#9C6644] hover:bg-[#835234] text-white text-xs sm:text-sm font-bold inline-flex items-center gap-2 shadow-lg transition-all"
+            >
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>전화 연결</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 6. 이용 안내 & 자주 묻는 질문 (FAQ) ==================== -->
+  <section id="guide" class="py-24 bg-[#FDFBF7] border-t border-[#E7DDD0]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5D7C5] text-[#7A5A40] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3.5">
+          <i data-lucide="help-circle" class="w-4 h-4"></i>
+          <span>FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="font-serif-kr text-3xl sm:text-5xl text-[#2B221A] font-bold mb-4 tracking-tight">
+          이용 안내 및 자주 묻는 질문
+        </h2>
+        <p class="text-[#635142] text-sm sm:text-base font-light">
+          코리스테이 이용에 대해 가장 많이 주시는 문의사항을 정리했습니다.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item rounded-2xl border border-[#E7DDD0] overflow-hidden bg-[#FAF7F1] transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#F3ECE1] transition-colors">
+            <span class="font-serif-kr font-bold text-base sm:text-lg text-[#2B2119]">Q. 입퇴실 시간과 체크인은 어떻게 진행되나요?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#8C6D52] transition-transform duration-300 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-6 pt-1 text-sm sm:text-base text-[#544336] leading-relaxed hidden">
+            입실은 <strong>오후 3시</strong>부터 가능하며, 퇴실은 익일 <strong>오전 11시</strong>까지입니다.<br />
+            비대면 프라이빗 체크인 시스템으로 운영되며, 입실 당일 오전 11시에 예약자 연락처로 객실 도어락 비밀번호 및 상세 이용 수칙 안내 문자가 자동 발송됩니다.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item rounded-2xl border border-[#E7DDD0] overflow-hidden bg-[#FAF7F1] transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#F3ECE1] transition-colors">
+            <span class="font-serif-kr font-bold text-base sm:text-lg text-[#2B2119]">Q. 바비큐 그릴과 모닥불 불멍은 당일 신청 가능한가요?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#8C6D52] transition-transform duration-300 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-6 pt-1 text-sm sm:text-base text-[#544336] leading-relaxed hidden">
+            네, 당일 신청 가능합니다! 바비큐 참숯 그릴 세트(30,000원)와 불멍 모닥불 세트(25,000원)는 입실 당일 오후 4시 이전까지 관리실(010-8742-9981)로 연락 주시면 원하시는 시간에 맞춰 안전하게 세팅해 드립니다. 우천이나 강풍 시 야외 불멍은 안전을 위해 제한될 수 있습니다.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item rounded-2xl border border-[#E7DDD0] overflow-hidden bg-[#FAF7F1] transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#F3ECE1] transition-colors">
+            <span class="font-serif-kr font-bold text-base sm:text-lg text-[#2B2119]">Q. 반려견(애완동물) 동반 입실이 가능한가요?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#8C6D52] transition-transform duration-300 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-6 pt-1 text-sm sm:text-base text-[#544336] leading-relaxed hidden">
+            코리스테이는 모든 투숙객의 알레르기 예방과 고요한 피톤치드 숲속 힐링 환경 유지를 위해 안타깝게도 반려동물 동반 입실이 엄격히 제한되어 있습니다. 쾌적한 휴식을 위한 배려에 양해 부탁드립니다.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item rounded-2xl border border-[#E7DDD0] overflow-hidden bg-[#FAF7F1] transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#F3ECE1] transition-colors">
+            <span class="font-serif-kr font-bold text-base sm:text-lg text-[#2B2119]">Q. 스파(자쿠지/히노끼) 이용 요금과 이용 시간은 어떻게 되나요?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#8C6D52] transition-transform duration-300 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-6 pt-1 text-sm sm:text-base text-[#544336] leading-relaxed hidden">
+            스파 설비가 구비된 객실(물소리, 숲마당, 별하늘)의 경우 <strong>별도의 추가 비용 없이 무료</strong>로 이용 가능합니다. 천연 입욕 솔트가 1회 기본 제공되며, 안전한 온수 공급을 위해 스파는 오후 3시부터 밤 10시까지 이용을 권장해 드립니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 7. 푸터 ==================== -->
+  <footer class="bg-[#1C1510] text-[#A69788] py-16 border-t border-[#362B21]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#2C211A]">
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#9C6644] text-white flex items-center justify-center font-serif-kr text-base font-bold">
+              코
+            </div>
+            <div>
+              <span class="font-serif-kr text-xl font-bold text-[#F3ECE1] block">코리스테이 (KORI STAY)</span>
+              <span class="text-xs text-[#8C7664]">강원도 춘천 감성 독채 프라이빗 펜션</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#8C7664] max-w-md font-light leading-relaxed">
+            솔바람, 물소리, 대청마루와 피톤치드 편백 숲이 함께하는 따뜻한 안식처. 일상의 모든 피로를 내려놓고 나만의 고요한 시간에 머물러보세요.
+          </p>
+        </div>
+
+        <div class="md:col-span-6 space-y-2 text-xs sm:text-sm text-[#948473]">
+          <p><strong>상호명:</strong> 코리스테이 | <strong>대표자:</strong> 코리 | <strong>사업자등록번호:</strong> 221-81-00000</p>
+          <p><strong>통신판매업신고:</strong> 제2025-강원춘천-0000호</p>
+          <p><strong>주소:</strong> 강원도 춘천시 남산면 서백길 125-9 코리스테이</p>
+          <p><strong>고객센터 & 예약 문의:</strong> 010-8742-9981 (09:00 ~ 21:00 연중무휴)</p>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#6B5A4B] gap-4">
+        <p>© 2025 KORI STAY. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#hero" class="hover:text-[#FAF6F0] transition-colors">맨 위로 이동 ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== 8. 모바일 전용 하단 고정 예약 바 ==================== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#1E1712]/95 backdrop-blur-lg border-t border-[#423326] p-3.5 flex items-center justify-between gap-3 shadow-2xl">
+    <a
+      href="tel:010-8742-9981"
+      class="flex-1 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 border border-white/15 transition-all"
+    >
+      <i data-lucide="phone" class="w-4 h-4 text-[#E7C69F]"></i>
+      <span>전화 문의</span>
+    </a>
+    <a
+      href="https://booking.naver.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex-[2] py-3.5 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#03C75A]/30 transition-all"
+    >
+      <span class="w-4 h-4 rounded-full bg-white text-[#03C75A] flex items-center justify-center text-[10px] font-black">N</span>
+      <span>네이버 실시간 예약</span>
+    </a>
+  </div>
+
+
+  <!-- ==================== 9. 객실 상세 모달 팝업 ==================== -->
+  <div id="room-detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-[#FDFBF7] rounded-3xl border border-[#E7DDD0] shadow-2xl overflow-hidden my-8">
+      <div class="p-6 sm:p-7 border-b border-[#EFE8DC] flex items-center justify-between bg-[#F4EFE6]">
+        <div>
+          <span class="text-xs font-bold text-[#9C6644] uppercase tracking-wider block mb-1">KORI STAY ROOM DETAIL</span>
+          <h3 id="modal-room-name" class="font-serif-kr text-2xl sm:text-3xl font-bold text-[#2B2119]">솔바람</h3>
+        </div>
+        <button onclick="closeRoomModal()" class="p-2.5 rounded-full hover:bg-black/5 text-[#544336] transition-colors cursor-pointer" aria-label="닫기">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="p-6 sm:p-8 max-h-[70vh] overflow-y-auto space-y-6 text-sm text-[#4E3E32]">
+        <div class="rounded-2xl overflow-hidden aspect-video bg-[#1C1510] shadow-inner">
+          <img id="modal-room-image" src="" alt="객실 사진" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 bg-[#F8F6F0] rounded-xl border border-[#E7DDD0]">
+            <span class="text-[#8C7664] block text-xs">객실 면적</span>
+            <span id="modal-room-size" class="font-bold text-[#2B2119] text-sm">16평</span>
+          </div>
+          <div class="p-3.5 bg-[#F8F6F0] rounded-xl border border-[#E7DDD0]">
+            <span class="text-[#8C7664] block text-xs">수용 인원</span>
+            <span id="modal-room-capacity" class="font-bold text-[#2B2119] text-sm">2인</span>
+          </div>
+          <div class="p-3.5 bg-[#F8F6F0] rounded-xl border border-[#E7DDD0]">
+            <span class="text-[#8C7664] block text-xs">주중 (일~목)</span>
+            <span id="modal-room-weekday" class="font-bold text-[#9C6644] text-sm">120,000원</span>
+          </div>
+          <div class="p-3.5 bg-[#F8F6F0] rounded-xl border border-[#E7DDD0]">
+            <span class="text-[#8C7664] block text-xs">주말 (금~토)</span>
+            <span id="modal-room-weekend" class="font-bold text-[#9C6644] text-sm">160,000원</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif-kr font-bold text-lg text-[#2B2119] mb-2.5">객실 소개</h4>
+          <p id="modal-room-desc" class="text-sm sm:text-base text-[#5C4A3C] leading-relaxed font-light"></p>
+        </div>
+
+        <div>
+          <h4 class="font-serif-kr font-bold text-lg text-[#2B2119] mb-2.5">시그니처 특징</h4>
+          <ul id="modal-room-highlights" class="space-y-2 text-sm text-[#4E3E32]"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif-kr font-bold text-lg text-[#2B2119] mb-2.5">구비 시설 & 비품</h4>
+          <div id="modal-room-amenities" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+
+      <div class="p-5 sm:p-6 border-t border-[#EFE8DC] bg-[#FAF7F2] flex items-center justify-between gap-3">
+        <button onclick="closeRoomModal()" class="px-5 py-3 rounded-xl border border-[#CDBEAF] text-sm font-semibold text-[#544336] hover:bg-[#F3ECE1] transition-colors cursor-pointer">
+          닫기
+        </button>
+        <a
+          href="https://booking.naver.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-7 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02B350] text-white text-sm font-bold shadow-md transition-colors flex items-center gap-2"
+        >
+          <span>네이버에서 실시간 예약하기</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ==================== 10. 순수 바닐라 자바스크립트 로직 ==================== -->
+<script>
+  /* 객실 데이터 상세 모음 */
+  const ROOMS_DATA = {
+    solbaram: {
+      name: '솔바람 (Solbaram)',
+      size: '16평 (53㎡)',
+      capacity: '기준 2인 / 최대 2인',
+      weekday: '120,000원',
+      weekend: '160,000원',
+      image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
+      desc: '창문을 열면 은은한 잣나무 솔향과 솔바람 소리가 귓가를 스치는 감성 공간입니다. 자작나무와 오크목의 담백한 원목 질감으로 꾸며져 있으며, 둘만의 조용하고 아늑한 휴식에 가장 최적화된 미니멀 프라이빗 룸입니다.',
+      highlights: ['프라이빗 포레스트 숲 조망 데크', '제네바 블루투스 오디오 스피커', '스페셜티 원두 & 핸드드립 도구 세트', '록시땅 프리미엄 4종 어메니티'],
+      amenities: ['시몬스 퀸 베드', '55인치 스마트 TV (넷플릭스)', '초고속 무선 와이파이', '발뮤다 전기포트 & 토스터', '미니 냉장고', '호텔식 코튼 가운', '야외 전용 테라스 데크']
+    },
+    mulsori: {
+      name: '물소리 (Mulsori)',
+      size: '22평 (73㎡)',
+      capacity: '기준 2인 / 최대 3인',
+      weekday: '180,000원',
+      weekend: '230,000원',
+      image: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80',
+      desc: '펜션 옆 맑은 청정 계곡의 잔잔한 여울물 소리가 마음의 묵은 피로를 씻어주는 객실입니다. 고급 원목 통창 앞으로 대형 릴렉스 실내 자쿠지가 마련되어 있어 사계절 따뜻한 반신욕을 즐기실 수 있습니다.',
+      highlights: ['계곡 조망 대형 실내 자쿠지', '전통 도자기 다도 세트 & 유기농 꽃차', '개별 테라스 숯불 바비큐 존', '다이슨 슈퍼소닉 헤어드라이어'],
+      amenities: ['천연 라텍스 킹 베드', '대형 스파 자쿠지', '65인치 스마트 TV', '네스프레소 커피머신', '전자레인지 & 조리도구', '천연 입욕 솔트']
+    },
+    dalmaru: {
+      name: '달마루 (Dalmaru)',
+      size: '28평 (93㎡)',
+      capacity: '기준 2인 / 최대 4인',
+      weekday: '240,000원',
+      weekend: '290,000원',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      desc: '우리 고유의 마루 구조를 현대적 감각으로 재해석한 대표 시그니처 룸입니다. 통원목 대청마루와 100인치 빔프로젝터가 구비되어 있어 감성적인 영화 감상과 여유로운 티타임을 즐기실 수 있습니다.',
+      highlights: ['전통 대청마루 감성 티 라운지', 'LG 시네빔 100인치 스크린 & 마샬 워번 스피커', '발뮤다 더 레인지 오븐', '중정 툇마루 뷰'],
+      amenities: ['킹 베드', '최고급 한식 토퍼 침구 세트', '100인치 빔스크린', '마샬 블루투스 스피커', '빌트인 주방 풀옵션', '바이레도(Byredo) 어메니티']
+    },
+    supmadang: {
+      name: '숲마당 (Supmadang)',
+      size: '36평 (119㎡)',
+      capacity: '기준 4인 / 최대 5인',
+      weekday: '310,000원',
+      weekend: '350,000원',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      desc: '50평 규모의 오롯한 단독 전용 잔디 마당과 일본 기소산 천연 편백(히노끼) 야외 대형 노천 스파를 갖춘 프라이빗 가든 빌라입니다. 가족이나 소중한 지인들과의 힐링 모임에 최적입니다.',
+      highlights: ['단독 50평 천연 잔디 마당 & 해먹 존', '천연 편백(히노끼) 노천 스파 (4인용)', '웨버 가스그릴 파빌리온 바비큐', '다이닝 6인용 원목 테이블'],
+      amenities: ['에이스 퀸 베드 2개', '야외 편백 히노끼탕', '75인치 대형 스마트 TV', '완비된 주방 & 6인 명품 식기 세트', '이솝(Aesop) 4종 세트']
+    },
+    byeolhaneul: {
+      name: '별하늘 (Byeolhaneul)',
+      size: '42평 (139㎡)',
+      capacity: '기준 4인 / 최대 6인',
+      weekday: '340,000원',
+      weekend: '380,000원',
+      image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+      desc: '침실 천장의 글래스 돔을 통해 침대에 누워서 밤하늘 별과 달을 감상하는 최고층 복층 펜트하우스입니다. 루프탑 인피니티 온수 노천 스파가 준비되어 있어 탁 트인 숲의 전경을 파노라마로 누리실 수 있습니다.',
+      highlights: ['침대 위 글래스 돔 천창 (별빛 파노라마)', '루프탑 인피니티 온수 노천 스파', '보스 서라운드 사운드 시스템', '전용 프리미엄 와인셀러'],
+      amenities: ['템퍼 킹 베드 1개 + 퀸 베드 1개', '루프탑 노천 스파', '85인치 초대형 스마트 TV', '와인셀러 & 와인잔 세트', '조말론(Jo Malone) 럭셔리 어메니티']
+    }
+  };
+
+  /* 1. 히어로 배경 슬라이드쇼 */
+  let heroIdx = 0;
+  const heroSlides = document.querySelectorAll('#hero-carousel .hero-slide');
+  const heroDots = document.querySelectorAll('#hero-indicators button');
+
+  function setHeroSlide(idx) {
+    heroIdx = idx;
+    heroSlides.forEach((slide, i) => {
+      if (i === heroIdx) {
+        slide.classList.remove('opacity-0', 'scale-105');
+        slide.classList.add('opacity-100', 'scale-100');
+      } else {
+        slide.classList.remove('opacity-100', 'scale-100');
+        slide.classList.add('opacity-0', 'scale-105');
+      }
+    });
+    heroDots.forEach((dot, i) => {
+      dot.className = i === heroIdx
+        ? 'h-2 rounded-full w-8 bg-[#E7C69F] transition-all duration-500 cursor-pointer'
+        : 'h-2 rounded-full w-2 bg-white/40 transition-all duration-500 cursor-pointer';
+    });
+  }
+
+  setInterval(() => {
+    setHeroSlide((heroIdx + 1) % heroSlides.length);
+  }, 6000);
+
+  /* 2. 객실 사진 수동 슬라이더 */
+  const roomSliders = { solbaram: 0, mulsori: 0, dalmaru: 0, supmadang: 0, byeolhaneul: 0 };
+
+  function changeRoomSlide(roomId, step) {
+    const wrap = document.getElementById('slider-' + roomId);
+    if (!wrap) return;
+    const imgs = wrap.querySelectorAll('img');
+    const total = imgs.length;
+    let cur = (roomSliders[roomId] + step + total) % total;
+    roomSliders[roomId] = cur;
+
+    imgs.forEach((img, i) => {
+      if (i === cur) {
+        img.classList.remove('hidden');
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+        img.classList.add('hidden');
+      }
+    });
+    const counter = document.getElementById('counter-' + roomId);
+    if (counter) counter.textContent = (cur + 1) + ' / ' + total;
+  }
+
+  /* 3. 객실 상세 모달 열기/닫기 */
+  function openRoomModal(roomId) {
+    const data = ROOMS_DATA[roomId];
+    if (!data) return;
+
+    document.getElementById('modal-room-name').textContent = data.name;
+    document.getElementById('modal-room-image').src = data.image;
+    document.getElementById('modal-room-size').textContent = data.size;
+    document.getElementById('modal-room-capacity').textContent = data.capacity;
+    document.getElementById('modal-room-weekday').textContent = data.weekday;
+    document.getElementById('modal-room-weekend').textContent = data.weekend;
+    document.getElementById('modal-room-desc').textContent = data.desc;
+
+    const hlBox = document.getElementById('modal-room-highlights');
+    hlBox.innerHTML = '';
+    data.highlights.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'flex items-center gap-2.5';
+      li.innerHTML = '<span class="w-2 h-2 rounded-full bg-[#9C6644] shrink-0"></span><span>' + item + '</span>';
+      hlBox.appendChild(li);
+    });
+
+    const amBox = document.getElementById('modal-room-amenities');
+    amBox.innerHTML = '';
+    data.amenities.forEach(item => {
+      const tag = document.createElement('span');
+      tag.className = 'px-3 py-1.5 rounded-lg bg-[#EFE8DC] text-[#4E3E32] text-xs sm:text-sm font-medium';
+      tag.textContent = item;
+      amBox.appendChild(tag);
+    });
+
+    const modal = document.getElementById('room-detail-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeRoomModal() {
+    const modal = document.getElementById('room-detail-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('room-detail-modal').addEventListener('click', function(e) {
+    if (e.target.id === 'room-detail-modal') closeRoomModal();
+  });
+
+  /* 4. FAQ 아코디언 동작 */
+  function toggleFaq(btn) {
+    const ans = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isHidden = ans.classList.contains('hidden');
+
+    document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.faq-icon').forEach(el => el.classList.remove('rotate-180'));
+
+    if (isHidden) {
+      ans.classList.remove('hidden');
+      if (icon) icon.classList.add('rotate-180');
+    }
+  }
+
+  /* 5. 주소 복사 기능 */
+  function copyAddressText() {
+    navigator.clipboard.writeText("강원도 춘천시 남산면 서백길 125-9 코리스테이").then(() => {
+      const label = document.getElementById('copy-address-label');
+      if (label) {
+        label.textContent = "복사 완료 ✓";
+        setTimeout(() => { label.textContent = "주소 복사"; }, 2000);
+      }
+    });
+  }
+
+  /* 6. 모바일 메뉴 토글 기능 */
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-dropdown');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+
+  /* 7. Lucide 아이콘 초기화 */
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+  });
+</script>
+
+</body>
+</html>

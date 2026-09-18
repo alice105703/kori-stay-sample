@@ -1,0 +1,8 @@
+{
+  "name": "코리스테이 - 감성 우드톤 힐링 펜션",
+  "description": "솔바람, 물소리, 달마루, 숲마당, 별하늘 5개 프라이빗 독채 객실과 자연의 온기를 담은 감성 펜션 코리스테이 실시간 예약 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
