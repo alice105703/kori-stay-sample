@@ -81,7 +81,7 @@ export default function Hero() {
         {/* Main Heading */}
         <h1 className="font-serif-kr text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-tight sm:leading-snug mb-5 text-[#FDFBF7] drop-shadow-sm">
           나무의 결, 숲의 소리<br />
-          <span className="text-[#E7C69F] font-normal italic">코리스테이</span>에서의 온전한 쉼
+          <span className="text-[#E7C69F] font-normal italic">코리스테이</span>에서 즐기는 여유
         </h1>
 
         <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#DCD1C4] font-light leading-relaxed">
